@@ -1,0 +1,54 @@
+
+Ruby intro part 1
+  #sum
+    should be defined
+    returns correct sum
+    works on the empty array
+  #max_2_sum
+    should be defined
+    returns the correct sum
+    works even if 2 largest values are the same
+    returns zero if array is empty
+    returns value of the element if just one element
+  #sum_to_n?
+    should be defined
+    returns true when any two elements sum to the second argument
+    returns false for any single element array
+    returns false for an empty array
+
+Ruby intro part 2
+  #hello
+    should be defined
+    returns the correct string
+  #starts_with_consonant?
+    should be defined
+    classifies true cases
+    classifies false cases
+    works on the empty string
+    works on nonletters
+  #binary_multiple_of_4?
+    should be defined
+    classifies valid binary numbers
+    rejects invalid binary numbers
+
+Ruby intro part 3
+  BookInStock
+    should be defined
+    getters and setters
+      should set ISBN
+      should set price
+      should be able to change ISBN
+      should be able to change price
+    constructor
+      should reject invalid ISBN number
+      should reject zero price
+      should reject negative price
+    #price_as_string
+      should be defined
+      should display 33.95 as $33.95
+      should display 1.1 as $1.10
+      should display 20 as $20.00
+
+Finished in 0.00884 seconds (files took 0.05607 seconds to load)
+34 examples, 0 failures
+

@@ -34,7 +34,6 @@ def sum_to_n?(arr, number)
 end
 
 
-
 # ------------------------------------------------------------------
 # Part 2
 # bundle exec rspec -fd spec/part2_spec.rb
@@ -77,13 +76,20 @@ class BookInStock
   attr_accessor :isbn, :price
 
   def initialize(isbn, price)
-    raise ArgumentError, 'ISBN cant be empty' if isbn.empty?
-    raise ArgumentError, 'Price needs to be > 0' if price <= 0
-
-    @isbn = isbn
-    @price = price
+    self.isbn = isbn   # use setter method so validation is applied
+    self.price = price
   end
 
+  def isbn=(isbn)
+    raise ArgumentError, 'ISBN cannot be empty' if isbn.empty?
+    @isbn = isbn
+  end
+
+  def price=(price)
+    raise ArgumentError, 'Price must be > 0' if price <= 0
+    @price = price
+  end
+  
   # returning the price of the book as a string with a leading $
   # also always 2 decimal places
   def price_as_string
